@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Vibes</title>
+    <title>Sebas Music</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #667eea;
-            --secondary-color: #764ba2;
+            --primary-color: #5dade2; /* azul clarito */
+            --secondary-color: #3498db;
             --text-color: #333;
             --white: #fff;
             --font: 'Poppins', sans-serif;
@@ -23,7 +23,7 @@
         body {
             font-family: var(--font);
             color: var(--text-color);
-            background: #f4f4f4;
+            background: #f4faff;
         }
 
         /* Header */
@@ -32,7 +32,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px 5%;
-            background: rgba(255,255,255,0.8);
+            background: rgba(255,255,255,0.9);
             backdrop-filter: blur(10px);
             position: sticky;
             top: 0;
@@ -41,6 +41,7 @@
         .logo {
             font-weight: 700;
             font-size: 1.5rem;
+            color: var(--secondary-color);
         }
 
         .menu {
@@ -88,8 +89,6 @@
             border-radius: 30px;
             cursor: pointer;
             font-weight: bold;
-            position: relative;
-            overflow: hidden;
             transition: transform 0.3s;
         }
 
@@ -97,10 +96,15 @@
             transform: scale(1.05);
         }
 
-        /* Sobre Nosotros */
-        .about {
+        /* Sección */
+        section {
             padding: 60px 20px;
             text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: var(--secondary-color);
         }
 
         .services-container {
@@ -108,42 +112,17 @@
             flex-wrap: wrap;
             gap: 20px;
             justify-content: center;
-            margin-top: 30px;
         }
 
         .service-card {
             flex: 0 1 300px;
             padding: 20px;
             border-radius: 15px;
-            text-align: center;
+            background: #fff;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
-        .glass-card {
-            background: rgba(255,255,255,0.2);
-            backdrop-filter: blur(10px);
-        }
-
-        /* Animaciones */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 1s ease forwards;
-        }
-
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
         /* Galería */
-        .gallery {
-            padding: 60px 20px;
-            text-align: center;
-        }
-
         .gallery-container {
             display: flex;
             flex-wrap: wrap;
@@ -162,12 +141,6 @@
 
         .gallery-container img:hover {
             transform: scale(1.1);
-        }
-
-        /* Contacto */
-        .contact {
-            padding: 60px 20px;
-            text-align: center;
         }
 
         /* Footer */
@@ -191,7 +164,6 @@
             font-weight: 600;
         }
 
-        /* Responsivo */
         @media (max-width: 768px) {
             .menu {
                 flex-direction: column;
@@ -208,10 +180,10 @@
     <!-- Header -->
     <header>
         <nav>
-            <div class="logo">🎵 Music Vibes</div>
+            <div class="logo">🎶 Sebas Music</div>
             <ul class="menu">
                 <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#about">Sobre Nosotros</a></li>
+                <li><a href="#favoritos">Mis Favoritos</a></li>
                 <li><a href="#galeria">Galería</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
@@ -220,55 +192,56 @@
 
     <!-- Hero -->
     <section id="inicio" class="hero gradient-bg">
-        <h1>Vive la Música</h1>
-        <p>Conecta con tus artistas favoritos y descubre nuevos sonidos</p>
-        <button class="modern-button">Explorar Ahora</button>
+        <h1>Bienvenido a Sebas Music</h1>
+        <p>Mi espacio para compartir la música que más me inspira</p>
+        <button class="modern-button">Explorar</button>
     </section>
 
-    <!-- Sobre Nosotros -->
-    <section id="about" class="about">
-        <h2>¿Quiénes Somos?</h2>
+    <!-- Mis Favoritos -->
+    <section id="favoritos">
+        <h2>🎧 Mi Música Favorita</h2>
         <div class="services-container">
-            <div class="service-card glass-card fade-in">
-                <h3>🎤 Conciertos</h3>
-                <p>Te traemos lo mejor de la música en vivo.</p>
+            <div class="service-card">
+                <h3>Bad Bunny</h3>
+                <p>Canción favorita: <b>Estamos Bien</b></p>
+                <a href="https://www.instagram.com/badbunnypr/" target="_blank">Instagram</a> |
+                <a href="https://www.youtube.com/@badbunnyPR" target="_blank">YouTube</a> |
+                <a href="https://open.spotify.com/artist/4q3ewBCX7sLwd24euuV69X" target="_blank">Spotify</a>
             </div>
-            <div class="service-card glass-card fade-in">
-                <h3>📀 Álbumes</h3>
-                <p>Explora lanzamientos exclusivos y clásicos.</p>
-            </div>
-            <div class="service-card glass-card fade-in">
-                <h3>📲 Comunidad</h3>
-                <p>Únete y comparte tu pasión por la música.</p>
+            <div class="service-card">
+                <h3>Anuel AA</h3>
+                <p>Canción favorita: <b>Ayer</b></p>
+                <a href="https://www.instagram.com/anuel/" target="_blank">Instagram</a> |
+                <a href="https://www.youtube.com/@AnuelAA" target="_blank">YouTube</a> |
+                <a href="https://open.spotify.com/artist/2R21vXR83lH98kGeO99Y66" target="_blank">Spotify</a>
             </div>
         </div>
     </section>
 
     <!-- Galería -->
-    <section id="galeria" class="gallery">
-        <h2>Galería Musical</h2>
+    <section id="galeria">
+        <h2>📸 Galería</h2>
         <div class="gallery-container">
-            <img src="https://picsum.photos/id/237/300/200" alt="Concierto en vivo">
-            <img src="https://picsum.photos/id/1027/300/200" alt="Artista cantando">
-            <img src="https://picsum.photos/id/1060/300/200" alt="Portada de disco">
-            <img src="https://picsum.photos/id/1074/300/200" alt="Festival de música">
+            <img src="https://picsum.photos/id/237/300/200" alt="Concierto">
+            <img src="https://picsum.photos/id/1027/300/200" alt="Bad Bunny">
+            <img src="https://picsum.photos/id/1060/300/200" alt="Anuel AA">
+            <img src="https://picsum.photos/id/1074/300/200" alt="Festival">
         </div>
     </section>
 
     <!-- Contacto -->
-    <section id="contacto" class="contact">
-        <h2>Contacto</h2>
-        <p>¿Quieres más información? Escríbenos a:</p>
-        <a href="mailto:info@musicvibes.com" class="modern-button">Enviar Correo</a>
+    <section id="contacto">
+        <h2>📩 Contacto</h2>
+        <p>Si quieres hablar de música, escríbeme:</p>
+        <a href="mailto:sebasmusic@correo.com" class="modern-button">Enviar Correo</a>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>© 2025 Music Vibes | Todos los derechos reservados</p>
+        <p>© 2025 Sebas Music | Todos los derechos reservados</p>
         <div class="socials">
-            <a href="#">Instagram</a>
-            <a href="#">Spotify</a>
-            <a href="#">YouTube</a>
+            <a href="https://www.instagram.com/badbunnypr/" target="_blank">Bad Bunny</a>
+            <a href="https://www.instagram.com/anuel/" target="_blank">Anuel AA</a>
         </div>
     </footer>
 </body>
